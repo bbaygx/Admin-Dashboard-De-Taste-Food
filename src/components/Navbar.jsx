@@ -37,22 +37,22 @@ const Navbar = () => {
     <>
     <div className="navbar z-50 top-0 fixed bg-base-100 shadow-xl">
     <div className="flex-none">
-    <button className="btn btn-square btn-ghost" onClick={openSidebar}>
+    {/* <button className="btn btn-square btn-ghost" onClick={openSidebar}>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-    </button>
+    </button> */}
   </div>
   <div className="flex-1">
     <a className="btn btn-ghost normal-case text-xl">Admin De Taste</a>
   </div>
   <div className="flex-none gap-2">
-    <div className="flex-1">
+    {/* <div className="flex-1">
     <Link to={`/table/add`}>
                 <button className="btn btn-primary flex gap-3">
                   <AiOutlinePlus className='text-white text-xl' />
                   <span>Add</span>
                 </button>
               </Link>
-    </div>
+    </div> */}
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar ">
         <div className="">
