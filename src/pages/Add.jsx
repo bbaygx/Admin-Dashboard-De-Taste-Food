@@ -11,6 +11,8 @@ const Add = () => {
   const [jenisMakanan, setJenisMakanan] = useState('');
   const [urlGofood, setUrlGofood] = useState('');
   const [urlGrabfood, setUrlGrabfood] = useState('');
+  // const [terlaris, setTerlaris] = useState('');
+  // const [terjual, setTerjual] = useState('');
   const [statusToko, setStatusToko] = useState('');
   const [area, setArea] = useState('');
   const [rating, setRating] = useState('');
@@ -56,12 +58,13 @@ const Add = () => {
           foodImage: imageUrl,
           foodType: jenisMakanan.split(", ").map((item) => item.trim()),
           region: area,
+          // terlaris: terlaris,
           status: statusToko,
-          rating: rating
+          rating: rating,
+          // terjual: parseInt(terlaris),
       })
-      console.log(req)
-      if(req.status === 201){
-        console.log("Sukses Upload ke Server")
+      console.log(req.data.data)
+      if(req.status >= 201 || req.status <= 299){
         navigate('/table')
       }
      } catch (err){
@@ -181,6 +184,33 @@ const Add = () => {
             onChange={(e) => setRating(e.target.value)}
           />
         </div>
+        {/* <div className="mb-6">
+          <label htmlFor="small-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            Terlaris
+          </label>
+          <input
+            type="text"
+            id="base-input"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Misal : 5000 (terjual) jika diatas 5000 maka Terlaris selain dari itu Kurang Terlaris"
+            value={terlaris}
+            onChange={(e) => setTerlaris(e.target.value)}
+          />
+        </div> */}
+        {/* <div className="mb-6">
+          <label htmlFor="small-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+            Terjual
+          </label>
+          <input
+            type="text"
+            id="base-input"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Misal : 5000 (terjual)"
+            value={terjual}
+            disabled
+            onChange={(e) => setTerjual(e.target.value)}
+          />
+        </div> */}
         <div className="mb-6">
           <div>
             <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">

@@ -43,7 +43,7 @@ const Edit = () => {
           }
         });
     } catch (error) {
-      console.log(error);
+      console.log('Gagal Upload');
     }
   };
 
@@ -64,7 +64,7 @@ const Edit = () => {
         setArea(data.region);
         setRating(data.rating);
       } catch (err) {
-        console.log(err);
+        console.log('Data Kosong');
       }
     }
     fetchData();

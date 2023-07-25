@@ -12,8 +12,7 @@ function App() {
     <>
       <Navbar/>
       <Routes>
-        {/* <Route path="/" element={<Home/>} /> */}
-        <Route path="/sign-in" element={<Sigin/>} />
+        <Route path="/" element={<Sigin/>} />
         <Route path="/table" element={<PrivateRoute><Table/></PrivateRoute>} />
         <Route path="/table/add" element={<PrivateRoute><Add/></PrivateRoute>} />
         <Route path="/table/edit/:id" element={<PrivateRoute><Edit/></PrivateRoute>} />
